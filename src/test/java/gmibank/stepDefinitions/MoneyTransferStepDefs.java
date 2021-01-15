@@ -66,6 +66,7 @@ public class MoneyTransferStepDefs {
         Select select1=new Select(moneyTransferPage.ToDropDown);
         select1.selectByIndex(0);
         BrowserUtils.waitFor(4);
+        System.out.println(moneyTransferPage.warningAlert.getText());
         Assert.assertTrue(moneyTransferPage.warningAlert.isDisplayed());
 
     }
